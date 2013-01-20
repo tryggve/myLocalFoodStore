@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+milk = SupplierCategory.create({name: 'Milk'})
+meat = SupplierCategory.create({name: 'Meat'})
+bread = SupplierCategory.create({name: 'Bread'})
+
+suppliers = Supplier.create([{name: 'Daisys Dairy', supplier_category: milk}, 
+														 {name: 'Marlons Meat', supplier_category: meat}, 
+														 {name: 'Brads Bread', supplier_category: bread}])

@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script type="text/javascript">
+		document.createElement("header");
+		document.createElement("hgroup");
+		document.createElement("nav");
+		document.createElement("section");
+		document.createElement("article");
+		document.createElement("aside");
+		document.createElement("address");
+		document.createElement("footer");
+	</script>
   <title>MyLocalFoodStore</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -8,7 +18,55 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="container">
+	<header>
+		<h1>Suppliers</h1>
+		<h2>- to my local food store</h2>
+		<form action="/home/search" method="get">
+			<fieldset class="right">
+			  <%= text_field_tag(:q, nil, :placeholder => "Enter keyword") %>
+			</fieldset>
+		</form>
+		<div id="clear">&nbsp;</div>
+	</header>
 
+	<div id="wrapper">
+    
+		<nav>
+			<ol>
+				<li><%= link_to "Home", :root %></li>
+					<li><%= link_to "Add new supplier", new_project_path %></li>
+					<li><%= link_to("Show all suppliers", :controller => :suppliers, :action => "index") %></li>
+				<% end %>
+			</ol>
+		</nav>
+		
+		<article>
+			<header>
+				<%= yield :header %>
+			</header>
+
+			<div id="content">
+				<% if flash[:message] %><div class="UploadOk"><%= flash[:message] %></div><% end %>
+				<% if flash[:error] %><p class="errorText"><%= flash[:error] %></p><% end %>
+				<%= yield %>
+			</div>
+
+			<div class="clear"></div>
+		</article>
+
+		<aside id="loginBox">
+		</aside>
+
+		<div class="clear"></div>
+	</div>
+
+	<footer>
+		<p>Innehållsansvarig: <a href="http://tryggveblom.se">Tryggve Blom</a>.</p>
+		<!-- p><a href="http://validator.w3.org/check?uri=referer">Testresultat på validator.w3.org &gt;&gt;</a></p -->
+	</footer>
+</div>
+
+</div>
 </body>
 </html>
