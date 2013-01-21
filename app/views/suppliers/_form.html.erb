@@ -1,0 +1,17 @@
+	<% if @supplier.errors.any? %>
+		<div class="errorText">
+			<strong><%= pluralize(@supplier.errors.count, "error") %> occured:</strong><br/>
+			<ul>
+				<% @supplier.errors.full_messages.each do |e| %>
+					<li><%= e %></li>
+				<% end %>
+			</ul>
+		</div>
+	<% end %>
+	<%= form_for @supplier do |s| %>
+		<%= s.collection_select :supplier_category_id, @categories, :id, :name, :selected => @supplier.supplier_category_id, :prompt => "Select Category" %>
+		<%= s.label :name %>
+		<%= s.text_field :name %>
+		<%= s.submit "Save Supplier" %>
+		<%= link_to "Cancel", suppliers_path %>
+	<% end %>

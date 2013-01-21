@@ -22,25 +22,23 @@
 	<header>
 		<h1>Suppliers</h1>
 		<h2>- to my local food store</h2>
+
+		<nav>
+			<ol>
+				<li><%= link_to "Show Suppliers", suppliers_path %></li>
+				<li><%= link_to "Add New Supplier", new_supplier_path %></li>
+			</ol>
+		</nav>
+		
 		<form action="/home/search" method="get">
 			<fieldset class="right">
 			  <%= text_field_tag(:q, nil, :placeholder => "Enter keyword") %>
 			</fieldset>
 		</form>
-		<div id="clear">&nbsp;</div>
+		<div class="clear">&nbsp;</div>
 	</header>
 
 	<div id="wrapper">
-    
-		<nav>
-			<ol>
-				<li><%= link_to "Home", :root %></li>
-					<li><%= link_to "Add new supplier", new_project_path %></li>
-					<li><%= link_to("Show all suppliers", :controller => :suppliers, :action => "index") %></li>
-				<% end %>
-			</ol>
-		</nav>
-		
 		<article>
 			<header>
 				<%= yield :header %>
@@ -55,18 +53,14 @@
 			<div class="clear"></div>
 		</article>
 
-		<aside id="loginBox">
-		</aside>
-
 		<div class="clear"></div>
 	</div>
 
 	<footer>
-		<p>Innehållsansvarig: <a href="http://tryggveblom.se">Tryggve Blom</a>.</p>
-		<!-- p><a href="http://validator.w3.org/check?uri=referer">Testresultat på validator.w3.org &gt;&gt;</a></p -->
+		<p>My Local Food Store - By <a href="http://tryggveblom.se">Tryggve Blom</a>.</p>
+		<!-- p><a href="http://validator.w3.org/check?uri=referer">Testresult from validator.w3.org &gt;&gt;</a></p -->
 	</footer>
 </div>
 
-</div>
 </body>
 </html>

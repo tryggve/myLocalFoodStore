@@ -1,0 +1,399 @@
+@media screen {
+
+/* Color chart
+
+babcbf - grey
+9ba672 - green
+736a63 - dark grey
+8c0f0f - red
+591818 - dark red
+
+*/
+
+/*  Index
+
+    1. Root-elements
+    2. Layout with top elements
+    3. Header
+    4. Left column
+    5. Content
+    6. Sub pages
+    7. Footer
+    8. Menu-formatering
+    9. Print style
+
+*/
+
+/* 1. Some root-elements */
+
+    body {
+        font-family: 'Verdana', Sans-Serif;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 30px auto;
+        background: url('stripes.png');
+    }
+    
+    p {
+        font-size: 12px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+ 
+    .center {
+        text-align:center;
+    }
+
+    .right {
+        text-align:right;
+        float: right;
+    }
+
+    .italic {
+        font-style: italic;
+    }
+
+    .floatright {
+        display: block;
+        float: right;
+    }
+
+    strong {
+        font-weight: bold;
+    }
+
+    img {
+        border:0;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .clear {
+        clear: both;
+    }
+    
+    .green {
+        color: #41a309;
+    }
+    
+    label {
+        display: block;
+    }
+    
+    textarea {
+        outline: 1px #000 solid;
+        margin-bottom: 5px;
+        resize: none;
+    }
+
+    textarea:focus {
+        outline: 1px #e06666 solid;
+        margin-bottom: 5px;
+    }
+    
+    .EditTextBox {
+        padding: 2px 3px;
+    }
+    .fulKod {
+        outline: 0;
+        background: #fff;
+        color: #000;
+    }
+
+    .errorText {
+        color: #ff0000;
+    }
+    
+    .success {
+		width: 432px;
+		height: 432px;
+		margin: auto auto;
+		text-align: center;
+    }
+
+    .pageError {
+        color: #ff0000;
+        border: 5px solid #ff0000;
+        background: url('error.png') no-repeat 10px 5px;
+        padding: 5px 0 5px 70px;
+    }
+
+    .EventOk {
+        border: 5px solid #00ff00;
+        color: #00ff00;
+        background: url('correct.png') no-repeat 10px 5px;
+        padding: 15px 0 5px 70px;
+        height: 60px;
+    }
+
+    .UploadOk {
+        text-align: left;
+        z-index: 100001;
+        position: fixed;
+        top: 35px;
+        left: 40%;
+        padding: 15px;
+        background: #22ff22;
+        border: 1px solid #dadada;
+        -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+
+
+    a:link {color:#000; text-decoration: none;}
+    a:focus {color:#000; text-decoration: underline;}
+    a:active {color:#888; text-decoration: none;}
+    a:visited {color:#000; text-decoration: none;}
+    a:hover {color:#000; text-decoration: underline;}
+
+
+/* 2. Layout with top elements */
+
+    header {
+        color: #eee;
+        background-color: #8c0f0f;
+        width: 938px;
+        margin: 0 auto 15px auto;
+        padding: 15px;
+        clear: both;
+        border: 1px solid #dadada;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+    
+    #wrapper {
+        width: 970px;
+        margin: 0 auto;
+        clear: both;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+
+    nav {
+        float: left;
+    }
+    
+    footer {
+        background: #fff;
+        color: #000;
+        font-size: 0.9em;
+        width: 938px;
+        margin: 15px auto 0 auto;
+        padding: 15px;
+        clear: both;
+        text-align: center;
+        border: 1px solid #dadada;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+    
+
+/* 3. Header */
+    
+    header h1 {
+        font-size: 24px;
+        line-height: 28px;
+        text-transform: uppercase;
+    }
+    
+    header h2 {
+        font-size: 16px;
+        text-transform: capitalize;
+    }
+
+
+    header form {
+        float: right;
+        color: #888;
+    }
+
+/* 4. Left column */
+
+    nav ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+    }
+
+    nav ol li {
+        display: inline-block;
+    }
+
+/* 5. Content */
+
+    article {
+        width: 968px;
+        color: #000;
+        background: #fff;
+        border: 1px solid #dadada;
+        margin: 0   ;
+        float: left;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+
+    article header {
+        width: 936px;
+        padding: 10px 15px;
+        margin: 0;
+    }
+   
+    article header h1 {
+        font-size: 16px;
+        display: inline-block;
+    }
+
+    article header p {
+        font-size: 12px;
+        font-style: italic;
+    }
+
+    article header a {
+        color: #fff;
+    }
+
+    #content {
+        padding: 10px;
+    }
+
+    #content h1 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    
+    #content h2 {
+        font-size: 15px;
+        background: #e0e0e0;
+        padding: 3px;
+        margin-bottom: 5px;
+    }
+
+    #content ul {
+        margin-bottom: 15px;
+    }
+
+    article footer {
+        width: 498px;
+        padding: 5px 10px;
+        margin: 0;
+        border: none;
+    }
+
+/* 6. Sub pages */
+
+    .listItem {
+        width: 95%;
+        margin: 0 auto 10px auto;
+        padding: 10px 5px;
+        background-color: #dadada;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+
+    .listItem:hover {
+        background-color: #e06666;
+    }
+
+    .listItem p{
+        margin: 0;
+    }
+
+
+    
+/* 7. Footer */
+
+    footer a:link {color:#000; text-decoration: none;}
+    footer a:focus {color:#000; text-decoration: underline;}
+    footer a:active {color:#888; text-decoration: none;}
+    footer a:visited {color:#000; text-decoration: none;}
+    footer a:hover {color:#000; text-decoration: underline;}
+
+
+
+/* 8. Menu */
+        
+    nav a:link {
+        display: block;
+        width: 170px;
+        padding: 10px;
+        margin: 5px 0;
+        text-decoration: none;
+        color: #fff;
+        background-color: #591818;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+
+    nav a:visited {
+        display: block;
+        width: 170px;
+        padding: 10px;
+        margin: 5px 0;
+        text-decoration: none;
+        color: #fff;
+        background-color: #591818;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+
+    nav a:focus {
+        text-decoration: underline;
+        color: #fff;
+        padding: 9px;
+        border: 1px dashed #4545DD;
+    }
+
+    nav a:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: #736a63;
+    }
+
+    nav a:active {
+        text-decoration: underline;
+        color: #888;
+    }
+    
+    nav a.current {
+        background-color: #8c0f0f;
+    }
+
+}
+/* 9. Print style */
+
+@media print {
+    
+    img {
+        display: none;
+    }
+
+    body, a {
+        font-family: "Times New Roman", Serif;
+        font-size: 12pt;
+        color: #000000
+    }
+
+    h1 a { font-size: 18pt}
+    h2 a { font-size: 16pt}
+    h3 { font-size: 14pt}
+
+    a {
+        text-decoration: none;
+    }
+
+}

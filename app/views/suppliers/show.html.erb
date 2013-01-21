@@ -1,0 +1,11 @@
+<% content_for :header do %>
+	<h1><%= @supplier.name %></h1>
+		<span class="right">
+			<%= link_to "Edit", edit_supplier_path(@supplier)%><br/>
+			<%= link_to "Delete", { :action => "destroy", :id => @supplier.id }, :confirm => "Do you want to delete \"#{@supplier.name}\"", :method => :delete %>
+		</span>
+	<h2>Category: <%= @supplier.supplier_category.name %></h2>
+<% end %>
+
+<h1><%= @supplier.name %></h1>
+<br/>
